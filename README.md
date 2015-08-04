@@ -7,13 +7,12 @@ The extension adds the following filters:
 - singularize
 - camelize
 - dasherize
-- pascalize
-- titleize
-- underscore
 - humanize
 - hyphenate
 - ordinalize
-- slugify
+- pascalize
+- titleize
+- underscore
 
 ### Usage
 
