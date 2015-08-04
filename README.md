@@ -14,6 +14,28 @@ The extension adds the following filters:
 - titleize
 - underscore
 
+### Installation
+
+```json
+{
+    "require": {
+        "joshuabaker/twig-inflect": "dev-master"
+    }
+}
+```
+
+```php
+<?php
+
+use JoshuaBaker\Twig\Extensions\Extension\Inflect as TwigInflect;
+
+$loader = new Twig_Loader_Filesystem('/path/to/templates');
+$twig   = new Twig_Environment($loader);
+
+// Registers extension
+$twig->setExtensions(new TwigInflect);
+```
+
 ### Usage
 
 ```jinja
