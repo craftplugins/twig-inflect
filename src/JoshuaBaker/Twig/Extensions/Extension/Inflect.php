@@ -2,17 +2,13 @@
 
 namespace JoshuaBaker\Twig\Extensions\Extension;
 
-use ICanBoogie\Inflector;
-use Twig_Extension;
-use Twig_Filter_Method;
-
 class Inflect extends \Twig_Extension
 {
 	protected $inflector;
 
 	public function __construct()
 	{
-		$this->inflector = Inflector::get();
+		$this->inflector = \ICanBoogie\Inflector::get();
 	}
 
 	public function getName()
@@ -23,17 +19,17 @@ class Inflect extends \Twig_Extension
 	public function getFilters()
 	{
 		return array(
-			new \Twig_Filter_Method($this, 'pluralize'),
-			new \Twig_Filter_Method($this, 'singularize'),
-			new \Twig_Filter_Method($this, 'camelize'),
-			new \Twig_Filter_Method($this, 'dasherize'),
-			new \Twig_Filter_Method($this, 'humanize'),
-			new \Twig_Filter_Method($this, 'hyphenate'),
-			new \Twig_Filter_Method($this, 'ordinalize'),
-			new \Twig_Filter_Method($this, 'pascalize'),
-			new \Twig_Filter_Method($this, 'slugify'),
-			new \Twig_Filter_Method($this, 'titleize'),
-			new \Twig_Filter_Method($this, 'underscore'),
+			'pluralize'   => new \Twig_Filter_Method($this, 'pluralize'),
+			'singularize' => new \Twig_Filter_Method($this, 'singularize'),
+			'camelize'    => new \Twig_Filter_Method($this, 'camelize'),
+			'dasherize'   => new \Twig_Filter_Method($this, 'dasherize'),
+			'humanize'    => new \Twig_Filter_Method($this, 'humanize'),
+			'hyphenate'   => new \Twig_Filter_Method($this, 'hyphenate'),
+			'ordinalize'  => new \Twig_Filter_Method($this, 'ordinalize'),
+			'pascalize'   => new \Twig_Filter_Method($this, 'pascalize'),
+			'slugify'     => new \Twig_Filter_Method($this, 'slugify'),
+			'titleize'    => new \Twig_Filter_Method($this, 'titleize'),
+			'underscore'  => new \Twig_Filter_Method($this, 'underscore'),
 		);
 	}
 
