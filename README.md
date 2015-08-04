@@ -14,6 +14,8 @@ The extension adds the following filters:
 - titleize
 - underscore
 
+--
+
 ### Installation
 
 ```json
@@ -35,6 +37,8 @@ $twig   = new Twig_Environment($loader);
 // Registers extension
 $twig->setExtensions(new TwigInflect);
 ```
+
+--
 
 ### Usage
 
