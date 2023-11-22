@@ -1,3 +1,7 @@
+> [!IMPORTANT]
+>
+> **This extension is no longer maintained.**
+
 # TwigInflect
 
 TwigInflect is a [Twig](http://twig.sensiolabs.org/) extension to transform the inflection of strings.
@@ -14,9 +18,7 @@ The extension adds the following filters:
 - titleize
 - underscore
 
---
-
-### Installation
+## Installation
 
 ```json
 {
@@ -38,11 +40,9 @@ $twig   = new Twig_Environment($loader);
 $twig->setExtensions(new TwigInflect);
 ```
 
---
+## Usage
 
-### Usage
-
-```jinja
+```twig
 {{ 'car' | pluralize }}
 {{ 'car' | pluralize(3) }}
 {# cars #}
